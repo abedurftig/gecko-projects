@@ -281,37 +281,69 @@ a:hover {
 }
 
 /* Experience Section */
-.experience-list {
+.experience-content-list {
     max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.experience-bullets {
+    list-style: disc;
+    padding-left: var(--spacing-md);
+}
+
+.experience-bullets li {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+.experience-bullets li::marker {
+    color: var(--color-primary);
+}
+
+/* Skills Section */
+.skills-heading {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    font-size: 2rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-lg);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--spacing-md);
+    max-width: 900px;
     margin: 0 auto;
 }
 
-.experience-item {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: var(--spacing-md);
-    padding: var(--spacing-md) 0;
-    border-bottom: 1px solid var(--color-border);
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.experience-item:last-child {
-    border-bottom: none;
-}
-
-.experience-date {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--color-text-light);
-}
-
-.experience-content h3 {
-    margin-bottom: var(--spacing-xs);
-}
-
-.experience-company {
-    font-weight: 500;
-    color: var(--color-primary);
+.skill-icon {
+    width: 80px;
+    height: 80px;
     margin-bottom: var(--spacing-sm);
+    color: #f5a623;
+}
+
+.skill-icon svg,
+.skill-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.skill-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text);
 }
 
 /* Contact Section */
@@ -395,13 +427,18 @@ a:hover {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
-    .experience-item {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-xs);
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-sm);
     }
 
-    .experience-date {
-        color: var(--color-primary);
+    .skill-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .skill-label {
+        font-size: 0.85rem;
     }
 
     .section {
@@ -417,6 +454,19 @@ a:hover {
 
     .btn-large {
         padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .experience-bullets li {
         font-size: 1rem;
     }
 }
