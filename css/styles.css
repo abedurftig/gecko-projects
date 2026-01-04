@@ -536,6 +536,65 @@ a:hover {
     padding: 0;
 }
 
+/* How It Works Section */
+.how-it-works-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.how-it-works-card {
+    background-color: var(--color-background);
+    padding: var(--spacing-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.step-number {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--color-primary);
+    line-height: 1;
+}
+
+.step-divider {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-primary);
+    margin: var(--spacing-sm) 0;
+}
+
+.step-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.step-description {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.step-description a {
+    color: var(--color-primary);
+}
+
+.step-description a:hover {
+    color: var(--color-primary-dark);
+}
+
 /* Experience Section */
 .experience-content-list {
     max-width: 800px;
@@ -718,6 +777,10 @@ a:hover {
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
+
+    .how-it-works-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 480px) {
@@ -745,6 +808,10 @@ a:hover {
     }
 
     .services-teaser-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .how-it-works-grid {
         grid-template-columns: 1fr;
     }
 }
