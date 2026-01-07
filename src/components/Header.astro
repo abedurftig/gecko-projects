@@ -1,0 +1,28 @@
+---
+interface Props {
+    activePage?: string;
+}
+
+const { activePage = '' } = Astro.props;
+---
+
+<header class="header" id="header">
+    <div class="container">
+        <a href="/" class="logo">Gecko Projects</a>
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li><a href="/" class:list={["nav-link", { active: activePage === 'home' }]}>Home</a></li>
+                <li><a href="/about" class:list={["nav-link", { active: activePage === 'about' }]}>About</a></li>
+                <li><a href="/services" class:list={["nav-link", { active: activePage === 'services' }]}>Services</a></li>
+                <li><a href="/experience" class:list={["nav-link", { active: activePage === 'experience' }]}>Experience</a></li>
+                <li><a href="/contact" class:list={["nav-link", { active: activePage === 'contact' }]}>Contact</a></li>
+                <li><a href="https://www.linkedin.com/in/kathigerth" class="nav-link nav-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><img src="/images/LI-In-Bug.png" alt="LinkedIn"></a></li>
+            </ul>
+        </nav>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
