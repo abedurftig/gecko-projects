@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-    site: 'https://www.gecko-projects.com',
+    site: 'https://abedurftig.github.io',
+    base: '/gecko-projects',
 });
