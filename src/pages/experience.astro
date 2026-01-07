@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -34,31 +35,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div class="skills-grid">
                 <div class="skill-item">
                     <div class="skill-icon">
-                        <img src="/images/focus.png" alt="Customer focus"/>
+                        <img src={`${base}/images/focus.png`} alt="Customer focus"/>
                     </div>
                     <span class="skill-label">Customer focus</span>
                 </div>
                 <div class="skill-item">
                     <div class="skill-icon">
-                        <img src="/images/group.png" alt="Clear communicator"/>
+                        <img src={`${base}/images/group.png`} alt="Clear communicator"/>
                     </div>
                     <span class="skill-label">Clear communicator</span>
                 </div>
                 <div class="skill-item">
                     <div class="skill-icon">
-                        <img src="/images/listen.png" alt="Good listener"/>
+                        <img src={`${base}/images/listen.png`} alt="Good listener"/>
                     </div>
                     <span class="skill-label">Good listener</span>
                 </div>
                 <div class="skill-item">
                     <div class="skill-icon">
-                        <img src="/images/idea.png" alt="Critical thinker"/>
+                        <img src={`${base}/images/idea.png`} alt="Critical thinker"/>
                     </div>
                     <span class="skill-label">Critical thinker</span>
                 </div>
                 <div class="skill-item">
                     <div class="skill-icon">
-                        <img src="/images/skills.png" alt="Proactive person"/>
+                        <img src={`${base}/images/skills.png`} alt="Proactive person"/>
                     </div>
                     <span class="skill-label">Proactive person</span>
                 </div>
